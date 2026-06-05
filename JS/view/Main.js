@@ -56,7 +56,7 @@ function crearBotones(){
     return div;
 }
 
-function dibujar(){
+export function dibujar(){
     let div = document.getElementById('contenedor');
     
     let fila = crearDivPrincipal()
@@ -70,5 +70,3 @@ function dibujar(){
 
     div.appendChild(fila);
 }
-
-dibujar();
