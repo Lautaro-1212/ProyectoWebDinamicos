@@ -32,6 +32,13 @@ function crearPrecio(){
     return div;
 }
 
+function crearStock(){
+    let div = document.createElement("div");
+    div.classList.add("item");
+    div.textContent = 2000;
+    return div;
+}
+
 function crearBotones(){
     let div = document.createElement("div");
     div.classList.add("filaAccion");
@@ -51,12 +58,11 @@ function dibujar(){
     
     let fila = crearDivPrincipal()
 
-    
-
     fila.appendChild(crearID());
     fila.appendChild(crearCodigo());
     fila.appendChild(crearNombre());
     fila.appendChild(crearPrecio());
+    fila.appendChild(crearStock());
     fila.appendChild(crearBotones());
 
     div.appendChild(fila);
