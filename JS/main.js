@@ -42,12 +42,15 @@ function crearStock(){
 function crearBotones(){
     let div = document.createElement("div");
     div.classList.add("filaAccion");
+
     let button1 = document.createElement("button");
     button1.textContent = "Modificar"
     button1.classList.add("botonesAccion")
+
     let button2 = document.createElement("button");
     button2.textContent = "Eliminar"
     button2.classList.add("botonesAccion")
+    
     div.appendChild(button1);
     div.appendChild(button2);
     return div;

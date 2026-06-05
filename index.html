@@ -14,7 +14,21 @@
         <div class="header"> 
             <img src="assets/Logo.png" class="logo">
             <h1 class="title">Lista de productos</h1>
-            <button class="button">Agregar productos</button>
+
+            <button commandfor="info" command ="show-modal" class="button">Agregar productos</button>
+
+            <dialog id="info">
+               <p> Agregue un nuevo producto</p>
+               
+               
+                <button commandfor="info" command="close">
+                    <p>Confirmar</p>
+                </button> 
+                
+                <button commandfor="info" command="close">
+                    <p>Cancelar</p>
+                </button> 
+            </dialog>
         </div>
 
         <div class="columna">
