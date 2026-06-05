@@ -8,7 +8,7 @@
 .pop{
     display: flex;
     padding:0;
-    background-color:blue;
+    background-color:var(--color-cabezera);
     height: 50px;
     width: 300px;
     justify-content:center;
@@ -27,11 +27,16 @@
 }
 .botones
 {
-    background-color: #e7ad0e;
     justify-content: center;
     align-items: center;
-    margin-left: 15%;
-    margin-bottom: 20px;
+    margin-left: 12%;
+    margin-bottom: 15px;
+    border: 2px solid black;
+    background-color: var(--color-botones);
+    margin-top: 50px;
+    font-size: 18px;
+    border-radius: 20px 20px 20px 20px;
+    cursor: pointer ;
 }
 .texto
 {
