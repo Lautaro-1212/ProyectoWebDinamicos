@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/colores.css">
     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/filas.css">
+    <link rel="stylesheet" href="CSS/pop-up.css">
 </head>
 <body>
     <div class="contenedor" id="contenedor">
@@ -16,16 +17,20 @@
             <h1 class="title">Lista de productos</h1>
 
             <button commandfor="info" command ="show-modal" class="button">Agregar productos</button>
-
-            <dialog id="info">
-               <p> Agregue un nuevo producto</p>
-               
-               
-                <button commandfor="info" command="close">
+            <dialog id="info" class="up">
+                <div>
+                <p class="pop"> Agregue un nuevo producto</p></div> 
+                <div>
+                    <label class="texto">Nombre </label>
+               <input type="text" class="placeholdear" placeholder="Ingrese el nombre del producto"></input>
+               </div>
+               <br>
+               <br>
+                <button commandfor="info" command="close" class="botones">
                     <p>Confirmar</p>
                 </button> 
                 
-                <button commandfor="info" command="close">
+                <button commandfor="info" command="close" class="botones">
                     <p>Cancelar</p>
                 </button> 
             </dialog>
