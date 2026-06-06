@@ -4,6 +4,7 @@
     width: 198px;
     background-color: #ffffff;
     margin-left: auto;
+    border-radius: 5px;
 }
 .pop{
     display: flex;
@@ -33,7 +34,7 @@
     margin-bottom: 15px;
     border: 2px solid black;
     background-color: var(--color-botones);
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 18px;
     border-radius: 20px 20px 20px 20px;
     cursor: pointer ;
