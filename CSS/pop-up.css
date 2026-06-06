@@ -1,11 +1,11 @@
-.placeholdear
-{
+.inputs{
     height: 40px;
     width: 198px;
     background-color: #ffffff;
     margin-left: auto;
     border-radius: 5px;
 }
+
 .pop{
     display: flex;
     padding:0;
@@ -17,15 +17,16 @@
     margin-top: 0;
     font-size: 20px;
     text-align: center;
-    border-color: #000000;
-    
+    border-color: #000000
 }
+
 .up{
     padding:0;
     background-color: #ffffff;
     border-color: #000000;
     border-radius: 5px;
 }
+
 .botones
 {
     justify-content: center;
@@ -39,6 +40,7 @@
     border-radius: 20px 20px 20px 20px;
     cursor: pointer ;
 }
+
 .texto
 {
     align-items: center;

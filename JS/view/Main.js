@@ -4,38 +4,38 @@ function crearDivPrincipal(){
     return div;
 }
 
-function crearID(){
+function crearID(id){
     let div = document.createElement("div");
     div.classList.add("item");
-    div.textContent = 2;
+    div.textContent = id;
     return div;
 }
 
-function crearCodigo(){
+function crearCodigo(codigo){
     let div = document.createElement("div");
     div.classList.add("item");
-    div.textContent = 2341;
+    div.textContent = codigo;
     return div;
 }
 
-function crearNombre(){
+function crearNombre(nombre){
     let div = document.createElement("div");
     div.classList.add("item");
-    div.textContent = "Papas";
+    div.textContent = nombre;
     return div;
 }
 
-function crearPrecio(){
+function crearPrecio(precio){
     let div = document.createElement("div");
     div.classList.add("item");
-    div.textContent = 2000 + "$";
+    div.textContent = precio;
     return div;
 }
 
-function crearStock(){
+function crearStock(stock){
     let div = document.createElement("div");
     div.classList.add("item");
-    div.textContent = 2000;
+    div.textContent = stock;
     return div;
 }
 
@@ -56,17 +56,19 @@ function crearBotones(){
     return div;
 }
 
-export function dibujar(){
-    let div = document.getElementById('contenedor');
+export function dibujar(productos){
+    let contenedor = document.getElementById('contenedor');
     
-    let fila = crearDivPrincipal()
+    productos.forEach(producto => {
+        let fila = crearDivPrincipal();
 
-    fila.appendChild(crearID());
-    fila.appendChild(crearCodigo());
-    fila.appendChild(crearNombre());
-    fila.appendChild(crearPrecio());
-    fila.appendChild(crearStock());
-    fila.appendChild(crearBotones());
+        fila.appendChild(crearID(producto.id));
+        fila.appendChild(crearCodigo(producto.codigo));
+        fila.appendChild(crearNombre(producto.nombre));
+        fila.appendChild(crearPrecio(producto.precio + "$"));
+        fila.appendChild(crearStock(producto.stock));
+        fila.appendChild(crearBotones());
 
-    div.appendChild(fila);
+        contenedor.appendChild(fila);
+    });
 }
