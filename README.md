@@ -1,3 +1,31 @@
-Hola
+# Etapas del proyecto
+- [ ] Memoria(actual)
 
-AL FINAL: Agregar una pagina que sea del momo
+- [ ] Backend
+
+- [ ] Logins
+
+- [ ] Momo
+
+# Partes de cada etapa:
+1) Memoria:
+- [ ] Crear toda la parte visual de la tabla
+
+- [ ] Todas las operaciones del CRUD funcionen correctamente
+
+- [ ] Tenga filtros de varios tipos
+
+2) Backend
+- [ ] Pasar toda la logica del CRUD y los filtros a un back
+
+- [ ] Crear la base de datos
+
+- [ ] Comunicar los metodos con la base de datos
+
+3) logins:
+- [ ] Crear el front de el sistema de registrarse e iniciar sesion
+
+- [ ] Crear la logica para que funcione en memoria del registrarse
+
+4) Momo
+- [ ] Se describe solo
