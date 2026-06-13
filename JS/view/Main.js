@@ -57,8 +57,10 @@ function crearBotones(){
 }
 
 export function dibujar(productos){
-    let contenedor = document.getElementById('contenedor');
-    
+    let contenedor = document.getElementById('tabla-productos');
+
+    contenedor.innerHTML = "";
+
     productos.forEach(producto => {
         let fila = crearDivPrincipal();
 

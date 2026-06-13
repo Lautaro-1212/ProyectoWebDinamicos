@@ -24,22 +24,22 @@
             
                 <div>
                     <label style="margin-right: 8px;" class="texto">Codigo</label>
-                    <input type="text" class="inputs" placeholder="Ingrese el codigo del producto"></input>
+                    <input type="text" class="inputs" placeholder="Ingrese el codigo del producto" id="codigo"></input>
                 </div><br>
 
                 <div>
                     <label class="texto">Nombre </label>
-                    <input type="text" class="inputs" placeholder="Ingrese el nombre del producto"></input>
+                    <input type="text" class="inputs" placeholder="Ingrese el nombre del producto" id="nombreProdcuto"></input>
                 </div><br>
 
                 <div>
                     <label style="margin-right: 15px;" class="texto">Precio </label>
-                    <input type="text" class="inputs" placeholder="Ingrese el precio del producto"></input>
+                    <input type="text" class="inputs" placeholder="Ingrese el precio del producto" id="precio"></input>
                 </div><br>
 
                 <div>
                     <label style="margin-right: 20px;"class="texto">Stock </label>
-                    <input type="text" class="inputs" placeholder="Ingrese el stock del producto"></input>
+                    <input type="text" class="inputs" placeholder="Ingrese el stock del producto" id="stock"></input>
                 </div>
 
                 <button commandfor="info" command="close" class="botones" id="agregar">
@@ -61,17 +61,10 @@
             <div class="item">Accion</div>
         </div>
 
-        <div class="fila">
-            <div class="item">1</div>
-            <div class="item">2141</div>
-            <div class="item">Ravioles</div>
-            <div class="item">2000$</div>
-            <div class="item">2000</div>
-            <div class="filaAccion">
-                <button class="botonesAccion">Modifcar</button>
-                <button class="botonesAccion">Eliminar</button>
-            </div>
+        <div id="tabla-productos">
+           
         </div>
+
     </div>
     <script type="module" src="JS/app.js"></script>
 </body>
