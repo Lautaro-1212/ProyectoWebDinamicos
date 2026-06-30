@@ -1,11 +1,11 @@
-import { dibujar } from "./view/Main.js"
+import { redibujar } from "./view/Main.js"
 import Producto from "./model/Producto.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("agregar").addEventListener("click", agregarProducto)
 
-    dibujar(Producto.listaProductos)
+    redibujar(Producto.listaProductos)
 });
 
 function agregarProducto(){
@@ -17,7 +17,7 @@ function agregarProducto(){
 
     Producto.listaProductos.push(new Producto(codigo, nombreProdcuto, precio, stock));
 
-    dibujar(Producto.listaProductos);
+    redibujar(Producto.listaProductos);
 
     document.getElementById('codigo').value = "";
     document.getElementById('nombreProdcuto').value = "";

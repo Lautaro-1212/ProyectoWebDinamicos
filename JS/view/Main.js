@@ -4,38 +4,10 @@ function crearDivPrincipal(){
     return div;
 }
 
-function crearID(id){
+function crearColumna(texto){
     let div = document.createElement("div");
     div.classList.add("item");
-    div.textContent = id;
-    return div;
-}
-
-function crearCodigo(codigo){
-    let div = document.createElement("div");
-    div.classList.add("item");
-    div.textContent = codigo;
-    return div;
-}
-
-function crearNombre(nombre){
-    let div = document.createElement("div");
-    div.classList.add("item");
-    div.textContent = nombre;
-    return div;
-}
-
-function crearPrecio(precio){
-    let div = document.createElement("div");
-    div.classList.add("item");
-    div.textContent = precio;
-    return div;
-}
-
-function crearStock(stock){
-    let div = document.createElement("div");
-    div.classList.add("item");
-    div.textContent = stock;
+    div.textContent = texto;
     return div;
 }
 
@@ -56,7 +28,7 @@ function crearBotones(){
     return div;
 }
 
-export function dibujar(productos){
+export function redibujar(productos){
     let contenedor = document.getElementById('tabla-productos');
 
     contenedor.innerHTML = "";
@@ -64,11 +36,11 @@ export function dibujar(productos){
     productos.forEach(producto => {
         let fila = crearDivPrincipal();
 
-        fila.appendChild(crearID(producto.id));
-        fila.appendChild(crearCodigo(producto.codigo));
-        fila.appendChild(crearNombre(producto.nombre));
-        fila.appendChild(crearPrecio(producto.precio + "$"));
-        fila.appendChild(crearStock(producto.stock));
+        fila.appendChild(crearColumna(producto.id));
+        fila.appendChild(crearColumna(producto.codigo));
+        fila.appendChild(crearColumna(producto.nombre));
+        fila.appendChild(crearColumna(producto.precio + "$"));
+        fila.appendChild(crearColumna(producto.stock));
         fila.appendChild(crearBotones());
 
         contenedor.appendChild(fila);
