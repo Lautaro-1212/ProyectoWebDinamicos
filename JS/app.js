@@ -1,4 +1,4 @@
-import { redibujar } from "./view/Main.js"
+import { redibujar } from "./view/Tabla.js"
 import Producto from "./model/Producto.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -23,4 +23,8 @@ function agregarProducto(){
     document.getElementById('nombreProdcuto').value = "";
     document.getElementById('precio').value = "";
     document.getElementById('stock').value = "";
+}
+
+function modificarXId(){
+
 }

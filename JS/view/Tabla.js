@@ -1,3 +1,5 @@
+import { abrirPopUpModificar } from "./PopUpModificar.js";
+
 function crearDivPrincipal(){
     let div = document.createElement("div");
     div.classList.add("fila");
@@ -11,20 +13,23 @@ function crearColumna(texto){
     return div;
 }
 
-function crearBotones(){
+function crearBotones(producto){
     let div = document.createElement("div");
     div.classList.add("filaAccion");
 
-    let button1 = document.createElement("button");
-    button1.textContent = "Modificar"
-    button1.classList.add("botonesAccion")
+    let botonModificar = document.createElement("button");
+    botonModificar.textContent = "Modificar"
+    botonModificar.classList.add("botonesAccion")
+    botonModificar.addEventListener("click", () => {
+        abrirPopUpModificar(producto);
+    })
 
-    let button2 = document.createElement("button");
-    button2.textContent = "Eliminar"
-    button2.classList.add("botonesAccion")
+    let botonEliminar = document.createElement("button");
+    botonEliminar.textContent = "Eliminar"
+    botonEliminar.classList.add("botonesAccion")
     
-    div.appendChild(button1);
-    div.appendChild(button2);
+    div.appendChild(botonModificar);
+    div.appendChild(botonEliminar);
     return div;
 }
 
@@ -41,7 +46,7 @@ export function redibujar(productos){
         fila.appendChild(crearColumna(producto.nombre));
         fila.appendChild(crearColumna(producto.precio + "$"));
         fila.appendChild(crearColumna(producto.stock));
-        fila.appendChild(crearBotones());
+        fila.appendChild(crearBotones(producto));
 
         contenedor.appendChild(fila);
     });
