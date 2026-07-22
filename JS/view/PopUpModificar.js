@@ -1,4 +1,4 @@
-import { modificarXId } from "../app.js";
+import { modificar } from "../app.js";
 
 export function abrirPopUpModificar(producto){
 
@@ -41,7 +41,7 @@ export function abrirPopUpModificar(producto){
     const botonModificar = document.getElementById("modificar");
 
     botonModificar.addEventListener("click", () => {
-        modificarXId(producto)
+        modificar(producto)
     })
 
     dialog.showModal();

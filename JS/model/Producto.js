@@ -1,6 +1,6 @@
 export default class Producto{
     static listaProductos = [];
-    static id = 0;
+    static id = 1;
 
     constructor(codigo, nombre, precio, stock){
         this.id = Producto.id++;

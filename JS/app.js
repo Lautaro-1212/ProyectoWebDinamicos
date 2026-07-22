@@ -25,7 +25,7 @@ function agregarProducto(){
     document.getElementById('stock').value = "";
 }
 
-export function modificarXId(producto){
+export function modificar(producto){
     producto.codigo = document.getElementById("codigoModificar").value;
     producto.nombre = document.getElementById("nombreProdcutoModificar").value;
     producto.precio = document.getElementById("precioModificar").value;
@@ -34,6 +34,16 @@ export function modificarXId(producto){
     redibujar(Producto.listaProductos);
 
     const dialog = document.getElementById("popupModificar");
+    dialog.close();
+    dialog.innerHTML = "";
+}
+
+export function eliminarXId(id){
+    Producto.listaProductos = Producto.listaProductos.filter( producto => producto.id !== id)
+
+    redibujar(Producto.listaProductos);
+
+    const dialog = document.getElementById("popupEliminar");
     dialog.close();
     dialog.innerHTML = "";
 }

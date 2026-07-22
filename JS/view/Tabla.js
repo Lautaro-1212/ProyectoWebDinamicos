@@ -1,4 +1,5 @@
 import { abrirPopUpModificar } from "./PopUpModificar.js";
+import { abrirPopUpEliminar } from "./PopUpEliminar.js";
 
 function crearDivPrincipal(){
     let div = document.createElement("div");
@@ -27,6 +28,9 @@ function crearBotones(producto){
     let botonEliminar = document.createElement("button");
     botonEliminar.textContent = "Eliminar"
     botonEliminar.classList.add("botonesAccion")
+    botonEliminar.addEventListener("click", () => {
+        abrirPopUpEliminar(producto);
+    })
     
     div.appendChild(botonModificar);
     div.appendChild(botonEliminar);
