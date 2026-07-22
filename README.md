@@ -9,9 +9,9 @@
 
 # Partes de cada etapa:
 1) Memoria:
-- [ ] Crear toda la parte visual de la tabla
+- [ x ] Crear toda la parte visual de la tabla
 
-- [ ] Todas las operaciones del CRUD funcionen correctamente
+- [ x ] Todas las operaciones del CRUD funcionen correctamente
 
 - [ ] Tenga filtros de varios tipos
 
