@@ -25,6 +25,15 @@ function agregarProducto(){
     document.getElementById('stock').value = "";
 }
 
-function modificarXId(){
+export function modificarXId(producto){
+    producto.codigo = document.getElementById("codigoModificar").value;
+    producto.nombre = document.getElementById("nombreProdcutoModificar").value;
+    producto.precio = document.getElementById("precioModificar").value;
+    producto.stock = document.getElementById("stockModificar").value;
 
+    redibujar(Producto.listaProductos);
+
+    const dialog = document.getElementById("popupModificar");
+    dialog.close();
+    dialog.innerHTML = "";
 }

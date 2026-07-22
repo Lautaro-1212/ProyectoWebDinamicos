@@ -1,8 +1,8 @@
+import { modificarXId } from "../app.js";
+
 export function abrirPopUpModificar(producto){
 
     let dialog = document.getElementById("popupModificar");
-
-    //dialog.innerHTML = "";
 
     dialog.innerHTML = `
         <div>
@@ -26,10 +26,10 @@ export function abrirPopUpModificar(producto){
 
         <div>
             <label style="margin-right: 20px;"class="texto">Stock </label>
-            <input type="text" class="inputs" placeholder="Ingrese el nuevo stock del producto" id="stockModicar" value="${producto.stock}"></input>
+            <input type="text" class="inputs" placeholder="Ingrese el nuevo stock del producto" id="stockModificar" value="${producto.stock}"></input>
         </div>
-        
-        <button commandfor="popupModificar" command="close" class="botones" id="modficar">
+
+        <button commandfor="popupModificar" command="close" class="botones" id="modificar">
             <p>Confirmar</p>
         </button> 
         
@@ -37,6 +37,12 @@ export function abrirPopUpModificar(producto){
             <p>Cancelar</p>
         </button> 
     `
+
+    const botonModificar = document.getElementById("modificar");
+
+    botonModificar.addEventListener("click", () => {
+        modificarXId(producto)
+    })
 
     dialog.showModal();
 }
