@@ -11,18 +11,23 @@ document.addEventListener("DOMContentLoaded", () => {
 function agregarProducto(){
 
     let codigo = document.getElementById('codigo').value;
-    let nombreProdcuto = document.getElementById('nombreProdcuto').value;
+    let nombreProdcuto = document.getElementById('nombreProdcuto').value.trim();
     let precio = document.getElementById('precio').value;
     let stock = document.getElementById('stock').value;
 
-    Producto.listaProductos.push(new Producto(codigo, nombreProdcuto, precio, stock));
+    if(codigo && nombreProdcuto && precio && stock){
+        Producto.listaProductos.push(new Producto(codigo, nombreProdcuto, precio, stock));
 
-    redibujar(Producto.listaProductos);
+        redibujar(Producto.listaProductos);
 
-    document.getElementById('codigo').value = "";
-    document.getElementById('nombreProdcuto').value = "";
-    document.getElementById('precio').value = "";
-    document.getElementById('stock').value = "";
+        document.getElementById('codigo').value = "";
+        document.getElementById('nombreProdcuto').value = "";
+        document.getElementById('precio').value = "";
+        document.getElementById('stock').value = "";
+
+    } else {
+        console.log("No se ha podido cargar el producto, por favor complete los campos")
+    }
 }
 
 export function modificar(producto){

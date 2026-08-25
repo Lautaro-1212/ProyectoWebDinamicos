@@ -24,7 +24,7 @@
             
                 <div>
                     <label style="margin-right: 8px;" class="texto">Codigo</label>
-                    <input type="text" class="inputs" placeholder="Ingrese el codigo del producto" id="codigo"></input>
+                    <input type="number" min="0" class="inputs" placeholder="Ingrese el codigo del producto" id="codigo"></input>
                 </div><br>
 
                 <div>
@@ -34,12 +34,12 @@
 
                 <div>
                     <label style="margin-right: 15px;" class="texto">Precio </label>
-                    <input type="text" class="inputs" placeholder="Ingrese el precio del producto" id="precio"></input>
+                    <input type="number" min="0" class="inputs" placeholder="Ingrese el precio del producto" id="precio"></input>
                 </div><br>
 
                 <div>
                     <label style="margin-right: 20px;"class="texto">Stock </label>
-                    <input type="text" class="inputs" placeholder="Ingrese el stock del producto" id="stock"></input>
+                    <input type="number" min="0" class="inputs" placeholder="Ingrese el stock del producto" id="stock"></input>
                 </div>
 
                 <button commandfor="info" command="close" class="botones" id="agregar">
@@ -63,9 +63,8 @@
 
         <div id="tabla-productos"> </div>
 
-        <dialog id="popupModificar" class="up"></dialog>
+        <dialog id="popupAccion" class="up"></dialog>
 
-        <dialog id="popupEliminar" class="up"></dialog>
     </div>
     <script type="module" src="JS/app.js"></script>
 </body>

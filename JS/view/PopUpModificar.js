@@ -2,7 +2,7 @@ import { modificar } from "../app.js";
 
 export function abrirPopUpModificar(producto){
 
-    let dialog = document.getElementById("popupModificar");
+    let dialog = document.getElementById("popupAccion");
 
     dialog.innerHTML = `
         <div>
@@ -11,7 +11,7 @@ export function abrirPopUpModificar(producto){
     
         <div>
             <label style="margin-right: 8px;" class="texto">Codigo</label>
-            <input type="text" class="inputs" placeholder="Ingrese el nuevo codigo del producto" id="codigoModificar" value="${producto.codigo}"></input>
+            <input type="number" min="0" class="inputs" placeholder="Ingrese el nuevo codigo del producto" id="codigoModificar" value="${producto.codigo}"></input>
         </div><br>
 
         <div>
@@ -21,19 +21,19 @@ export function abrirPopUpModificar(producto){
 
         <div>
             <label style="margin-right: 15px;" class="texto">Precio </label>
-            <input type="text" class="inputs" placeholder="Ingrese el nuevo precio del producto" id="precioModificar" value="${producto.precio}"></input>
+            <input type="number" min="0" class="inputs" placeholder="Ingrese el nuevo precio del producto" id="precioModificar" value="${producto.precio}"></input>
         </div><br>
 
         <div>
             <label style="margin-right: 20px;"class="texto">Stock </label>
-            <input type="text" class="inputs" placeholder="Ingrese el nuevo stock del producto" id="stockModificar" value="${producto.stock}"></input>
+            <input type="number" min="0" class="inputs" placeholder="Ingrese el nuevo stock del producto" id="stockModificar" value="${producto.stock}"></input>
         </div>
 
-        <button commandfor="popupModificar" command="close" class="botones" id="modificar">
+        <button commandfor="popupAccion" command="close" class="botones" id="modificar">
             <p>Confirmar</p>
         </button> 
         
-        <button commandfor="popupModificar" command="close" class="botones">
+        <button commandfor="popupAccion" command="close" class="botones">
             <p>Cancelar</p>
         </button> 
     `

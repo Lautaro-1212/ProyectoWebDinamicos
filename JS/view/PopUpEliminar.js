@@ -1,7 +1,7 @@
 import { eliminarXId } from "../app.js";
 
 export function abrirPopUpEliminar(producto){
-    let dialog = document.getElementById("popupEliminar");
+    let dialog = document.getElementById("popupAccion");
     
         dialog.innerHTML = `
             <div>
@@ -24,11 +24,11 @@ export function abrirPopUpEliminar(producto){
                 <p style="margin-right: 20px;"class="texto" id="stockEliminar">Stock: ${producto.stock}</>
             </div>
     
-            <button commandfor="popupEliminar" command="close" class="botones" id="eliminar">
+            <button commandfor="popupAccion" command="close" class="botones" id="eliminar">
                 <p>Confirmar</p>
             </button> 
             
-            <button commandfor="popupEliminar" command="close" class="botones">
+            <button commandfor="popupAccion" command="close" class="botones">
                 <p>Cancelar</p>
             </button> 
         `
