@@ -49,6 +49,7 @@ export function eliminarXId(id){
     Producto.listaProductos = Producto.listaProductos.filter( producto => producto.id !== id)
 
     redibujar(Producto.listaProductos);
+    Toast("Se elimino correctamente el producto ✅", "green")
 
     const dialog = document.getElementById("popupEliminar");
     dialog.close();
