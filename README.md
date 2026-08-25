@@ -52,10 +52,10 @@ ProyectoWebDinamicos
 │  ├─ model
 │  │  └─ Producto.js
 │  └─ view
+│     ├─ NotificacionesToast.js
 │     ├─ PopUpEliminar.js
 │     ├─ PopUpModificar.js
-│     ├─ Tabla.js
-│     └─ ToastAprobado.js
+│     └─ Tabla.js
 ├─ README.md
 ├─ assets
 │  └─ Logo.png
