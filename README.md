@@ -33,3 +33,32 @@
 # Documntacion:
 
 https://docs.google.com/document/d/1YsUsxgh_A5zfHMA2DGuhVwg4KbdrL8-0cuOQ4hEdpLw/edit?tab=t.0
+
+
+```
+ProyectoWebDinamicos
+├─ CSS
+│  ├─ colores.css
+│  ├─ filas.css
+│  ├─ header.css
+│  ├─ pop-up.css
+│  └─ style.css
+├─ JS
+│  ├─ app.js
+│  ├─ lib
+│  │  └─ toastify
+│  │     ├─ toastify-es.js
+│  │     └─ toastify.css
+│  ├─ model
+│  │  └─ Producto.js
+│  └─ view
+│     ├─ PopUpEliminar.js
+│     ├─ PopUpModificar.js
+│     ├─ Tabla.js
+│     └─ ToastAprobado.js
+├─ README.md
+├─ assets
+│  └─ Logo.png
+└─ index.html
+
+```

@@ -1,5 +1,6 @@
 import { redibujar } from "./view/Tabla.js"
 import Producto from "./model/Producto.js";
+import { Toast } from "./view/NotificacionesToast.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -19,6 +20,7 @@ function agregarProducto(){
         Producto.listaProductos.push(new Producto(codigo, nombreProdcuto, precio, stock));
 
         redibujar(Producto.listaProductos);
+        Toast("Se cargo el producto ✅", "green")
 
         document.getElementById('codigo').value = "";
         document.getElementById('nombreProdcuto').value = "";
@@ -26,7 +28,7 @@ function agregarProducto(){
         document.getElementById('stock').value = "";
 
     } else {
-        console.log("No se ha podido cargar el producto, por favor complete los campos")
+        Toast("No se pudo cargar el producto, complete los campos ❌", "red")
     }
 }
 
