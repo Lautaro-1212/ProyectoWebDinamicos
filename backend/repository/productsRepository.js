@@ -3,7 +3,7 @@ import db from "../config/database.js";
 export function findAll() {
     const resultado = db.prepare(`
         SELECT id, code, name, price, stock
-        FROM produc
+        FROM product
     `).all();
 
     console.log("Se obtuvieron todos los productos");
@@ -14,7 +14,7 @@ export function findAll() {
 export function findById(id) {
     const resultado = db.prepare(`
         SELECT id, code, name, price, stock
-        FROM produc
+        FROM product
         WHERE id = ?
     `).get(id);
 
@@ -26,7 +26,7 @@ export function findById(id) {
 export function findByCode(code) {
     const resultado = db.prepare(`
         SELECT id, code, name, price, stock
-        FROM produc
+        FROM product
         WHERE code = ?
     `).get(code);
 
@@ -37,7 +37,7 @@ export function findByCode(code) {
 
 export function create(product) {
     const resultado = db.prepare(`
-        INSERT INTO produc (code, name, price, stock)
+        INSERT INTO product (code, name, price, stock)
         VALUES (?, ?, ?, ?)
     `).run(
         product.code,
@@ -74,7 +74,7 @@ export function updateById(id, product) {
 
 export function deleteById(id) {
     const resultado = db.prepare(`
-        DELETE FROM produc
+        DELETE FROM product
         WHERE id = ?
     `).run(id);
 

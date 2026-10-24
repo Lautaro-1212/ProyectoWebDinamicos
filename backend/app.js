@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { startBDD } from './database/schema';
+import { startBDD } from './database/schema.js';
 import productRouter from './controller/productsController.js'
 
 const app = express()
@@ -10,7 +10,7 @@ const PORT = "3000";
 app.use(cors())
 app.use(express.json())
 
-app.use("/api/producs", productRouter)
+app.use("/api/products", productRouter)
 
 function startHTTP(){
     app.listen(PORT, '0.0.0.0', () => {
