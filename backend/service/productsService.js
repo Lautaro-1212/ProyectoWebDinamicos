@@ -12,7 +12,7 @@ export function getProductByCode(code){
     return findByCode(code)
 }
 
-export function safeProduct(product){
+export function saveProduct(product){
     return create(product)
 }
 
